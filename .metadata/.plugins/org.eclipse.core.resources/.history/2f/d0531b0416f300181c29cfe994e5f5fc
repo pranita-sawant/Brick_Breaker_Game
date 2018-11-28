@@ -161,14 +161,7 @@ public class Brick_Breaker extends JPanel implements KeyListener, ActionListener
 		
 	}
 
-	public void keyPressed(KeyEvent e) { 
-		if(e.getKeyCode()==KeyEvent.VK_RIGHT){
-			moveRight();
-		}
-		if(e.getKeyCode()==KeyEvent.VK_LEFT){
-			moveLeft();
-		}
-	}
+	public void keyPressed(KeyEvent arg0) { }
 
 
 	public void keyReleased(KeyEvent e)
@@ -181,6 +174,9 @@ public class Brick_Breaker extends JPanel implements KeyListener, ActionListener
 		if(e.getKeyCode()==KeyEvent.VK_LEFT){
 			if(playerX < 10){
 				playerX = 10;
+			}
+			else{
+				moveLeft();
 			}
 		}
 		if(e.getKeyCode()==KeyEvent.VK_ENTER){
@@ -208,11 +204,6 @@ public class Brick_Breaker extends JPanel implements KeyListener, ActionListener
 	public void moveLeft(){
 		play = true;
 		playerX-= 20;
-	}
-
-	public void keyTyped(KeyEvent arg0) {
-		// TODO Auto-generated method stub
-		
 	}
 	
 }
